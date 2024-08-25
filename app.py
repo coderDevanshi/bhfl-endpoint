@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 @app.route('/bfhl', methods=['POST'])
 def handle_post():
@@ -45,5 +45,5 @@ def handle_post():
 def handle_get():
     return jsonify({"operation_code": 1}), 200
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
